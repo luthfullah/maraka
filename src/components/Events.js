@@ -3,7 +3,7 @@ import moment from "moment";
 import axios from "axios";
 
 const Events = () => {
-  const [events, setEvents] = useState([]);
+  const [eventss, setEvents] = useState([]);
   const [error, setError] = useState("");
   const [showForm, setShowForm] = useState(false);
   const [expired, setExpired] = useState(false);
@@ -33,11 +33,11 @@ const Events = () => {
   }, []);
   const today = moment();
 
-  const upcomingEvents = events.filter((event) =>
-    moment(event.date).isAfter(today)
+  const upcomingEvents = eventss?.filter((eve) =>
+    moment(eve.date).isAfter(today)
   );
-  const pastEvents = events.filter((event) =>
-    moment(event.date).isBefore(today)
+  const pastEvents = eventss?.filter((even) =>
+    moment(even.date).isBefore(today)
   );
   const [expandedCardId, setExpandedCardId] = useState(null);
 
