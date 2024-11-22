@@ -33,12 +33,20 @@ const Events = () => {
   }, []);
   const today = moment();
 
-  const upcomingEvents = eventss?.filter((eve) =>
-    moment(eve.date).isAfter(today)
-  );
-  const pastEvents = eventss?.filter((even) =>
-    moment(even.date).isBefore(today)
-  );
+  // const upcomingEvents = eventss?.filter((eve) =>
+  //   moment(eve.date).isAfter(today)
+  // );
+  // const pastEvents = eventss?.filter((even) =>
+  //   moment(even.date).isBefore(today)
+  // );
+  const upcomingEvents = Array.isArray(eventss)
+  ? eventss.filter((eve) => eve.date && moment(eve.date).isAfter(today))
+  : [];
+
+const pastEvents = Array.isArray(eventss)
+  ? eventss.filter((even) => even.date && moment(even.date).isBefore(today))
+  : [];
+
   const [expandedCardId, setExpandedCardId] = useState(null);
 
   const handleToggleText = (eventId) => {
