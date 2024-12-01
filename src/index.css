@@ -399,7 +399,7 @@ footer ul li a {
 /* Services */
 .card-title {
   color: #463640;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
 }
 .p-3 {
@@ -408,9 +408,22 @@ footer ul li a {
 .card-text {
   padding: 0rem 0rem 1rem 0rem;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 15px;
 
 }
+.title-height {
+  min-height: 50px; /* Adjust height based on your design */
+  line-height: 1.4;
+}
+
+.description-height {
+  min-height: 80px; /* Adjust height to make all descriptions uniform */
+  overflow: hidden; /* Hide overflow if descriptions exceed the height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures consistent alignment */
+}
+
 
 .card {
   cursor: pointer;

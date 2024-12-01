@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import moment from 'moment';
 
 const Events = () => {
   const [images, setImages] = useState([]);
   const [eventName, setEventName] = useState(''); // State for event name
   const [description, setDescription] = useState(''); // State for description
   const [uploadStatus, setUploadStatus] = useState('');
+  const [eventDate, setEventDate] = useState('');
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
@@ -17,7 +19,7 @@ const Events = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${process.env.REACT_APP_PUBLIC_URL}/v1/b2c/eventsImages/`,{images:images[0],eventName,description} , {
+      const response = await axios.post(`${process.env.REACT_APP_PUBLIC_URL}/v1/b2c/eventsImages/`,{images:images[0],eventName,description,date:eventDate} , {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -81,6 +83,19 @@ const Events = () => {
             id="images"
             onChange={handleFileChange}
             multiple
+            required
+          />
+        </div>
+
+           {/* Event Date Field */}
+           <div className="mb-3">
+          <label htmlFor="eventDate" className="form-label">Event Date</label>
+          <input
+            type="date"
+            className="form-control w-25"
+            id="eventDate"
+            value={eventDate ? moment(eventDate).format('YYYY-MM-DD') : ''}
+            onChange={(e) => setEventDate(e.target.value)}
             required
           />
         </div>

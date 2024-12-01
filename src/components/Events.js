@@ -42,23 +42,81 @@ const Events = () => {
   const upcomingEvents = Array.isArray(eventss)
   ? eventss.filter((eve) => eve.date && moment(eve.date).isAfter(today))
   : [];
-
-const pastEvents = Array.isArray(eventss)
+  
+  const pastEvents = Array.isArray(eventss)
   ? eventss.filter((even) => even.date && moment(even.date).isBefore(today))
   : [];
+  console.log("pastEvents",pastEvents)
 
   const [expandedCardId, setExpandedCardId] = useState(null);
 
   const handleToggleText = (eventId) => {
-    setExpandedCardId(expandedCardId === eventId ? null : eventId);
+    // setExpandedCardId(expandedCardId === eventId ? null : eventId);
+
+      setExpandedCardId((prevId) => (prevId === eventId ? null : eventId));
+    
   };
+  // const renderEventCard = (event, isUpcoming) => (
+  //   <div
+  //     className="col-lg-1 col-md-4 col-sm-12 row mb-4  "
+  //     key={event.id}
+  //   >
+  //     <div
+  //       className={`card shadow-sm ${
+  //         isUpcoming ? "border-primary" : "border-secondary"
+  //       }`}
+  //     >
+  //       <img
+  //         src={process.env.REACT_APP_PUBLIC_URL + event.images[0]}
+  //         alt={event.eventName}
+  //         className="card-img-top mt-1"
+  //         height={200}
+  //         style={{
+  //           objectFit: 'cover',
+  //         }}
+  //       />
+  //       <div className="card-body">
+  //         <h5 className=" sec-color fs-4 fw-bold">{event.eventName}</h5>
+  //         {/* <p className="card-text">{event.description}</p> */}
+  //         <p className="fontPara text-justify paragraph">
+  //           {expandedCardId === event.id
+  //             ? event.description
+  //             : `${event.description.substring(0, 100)}...`}
+  //           <span
+  //             onClick={() => handleToggleText(event.id)}
+  //             className="text-primary"
+  //             style={{ cursor: 'pointer' }}
+  //           >
+  //             {expandedCardId === event.id ? ' Show Less' : ' Read More'}
+  //           </span>
+  //         </p>
+  //         <p
+  //           className={`card-text ${
+  //             isUpcoming ? "text-primary" : "text-secondary"
+  //           }`}
+  //         >
+  //           {moment(event.date).format("MMMM Do, YYYY")}
+  //         </p>
+  //         <div className="mt-auto">
+  //         <button
+  //           onClick={() => handleRegisterClick(event)}
+  //           className={`btn bg_color btn-${isUpcoming ? "primary" : "secondary"}`}
+  //         >
+  //           {isUpcoming ? "Register Now" : "View Details"}
+  //         </button>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   </div>
+  // );
+
   const renderEventCard = (event, isUpcoming) => (
     <div
-      className="col-lg-1 col-md-4 col-sm-12 row mb-4  "
+      className="col-lg-1 col-md-4 col-sm-12 row mb-4"
       key={event.id}
     >
       <div
-        className={`card shadow-sm ${
+        className={`card shadow-sm h-60 d-flex flex-column ${
           isUpcoming ? "border-primary" : "border-secondary"
         }`}
       >
@@ -71,10 +129,9 @@ const pastEvents = Array.isArray(eventss)
             objectFit: 'cover',
           }}
         />
-        <div className="card-body">
-          <h5 className=" sec-color fs-3 fw-bold">{event.eventName}</h5>
-          {/* <p className="card-text">{event.description}</p> */}
-          <p className="fontPara text-justify paragraph">
+        <div className="card-body d-flex flex-column flex-grow-1">
+          <h5 className="sec-color card-title fw-bold title-height">{event.eventName}</h5>
+          <p className="card-text text-justify paragraph description-height flex-grow-1">
             {expandedCardId === event.id
               ? event.description
               : `${event.description.substring(0, 100)}...`}
@@ -93,18 +150,19 @@ const pastEvents = Array.isArray(eventss)
           >
             {moment(event.date).format("MMMM Do, YYYY")}
           </p>
-          <button
-            onClick={() => handleRegisterClick(event)}
-            className={`btn bg_color btn-${isUpcoming ? "primary" : "secondary"}`}
-          >
-            {isUpcoming ? "Register Now" : "View Details"}
-          </button>
+          <div className="mt-auto">
+            <button
+              onClick={() => handleRegisterClick(event)}
+              className={`btn bg_color btn-${isUpcoming ? "primary" : "secondary"}`}
+            >
+              {isUpcoming ? "Register Now" : "View Details"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
-
-
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
