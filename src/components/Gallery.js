@@ -223,7 +223,7 @@ export const Gallery = () => {
   };
 
   return (
-    <div className="gallerycenter">
+    <div id="gallery" className="gallerycenter">
       <div className="gallery-container">
         <h2 className="gallery-heading">Gallery</h2>
         <div className="gallery-grid">

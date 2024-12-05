@@ -44,7 +44,7 @@ const ResourcesPdf = () => {
         </div>
       )}
 
-      <h3 className=" main-title about-h2 mt-5 mb-2">Uploaded PDFs</h3>
+      <h3 className=" nav-item about-h2 mt-5 mb-2">Uploaded PDFs</h3>
       <ul className="list-group">
         {pdfFiles.map((pdf) => (
           <li key={pdf.id} className="list-group-item">

@@ -29,12 +29,12 @@ const About = () => {
         
 
         <Row>
-          <Col className='fs-4 text-white mb-2  text-justify paragraph'>
+          <Col className='text-white mx-4 my-2  text-justify card-text'>
           <p>Maraka Humanitarian Observatory (MHO) is a joint initiative of Crossroads Advisory (CA) and Migration Research Cell (MRC), Department of Political Science, University of Peshawar. Women’s Regional Network has provided seed funding for the Observatory. The Maraka Humanitarian Observatory is envisioned as a hub for meaningful exchange, discursive analysis, learning, research and action on local humanitarian issues and topics of global humanitarian governance issues that impact local humanitarian dynamics. The MHO aims to include among its membership key stakeholders belonging to diverse civil society groups, including academia, media, non-government institutions, public intellectuals, independent researchers and business community representatives. It seeks to bring all these diverse groups together on a single platform through monthly meetings at the Department of Political Science’s Migration Research Cell and at the Crossroads Advisory in Islamabad, both acting as platforms for the MHO.</p>
           </Col>
         </Row>
         <Row>
-          <Col className='fs-4 text-white mb-2  text-justify paragraph'>
+          <Col className='text-white mx-4 my-2 mb-2  text-justify card-text'>
           {/* <h3 className="sec-color fs-3 fw-bold mt-4">Host Institution Information</h3> */}
         <p >
         The Department of Political Science is an ideal institution to carry out academically rigorous research, and generate contextual findings on humanitarian governance issues. While hosting students from different parts of Pakistan and from neighbouring Afghanistan, the Department over the course of the past two decades has established institutional linkages with Universities, think tanks, donor agencies and research institutes through international conferences, workshops, summer schools and research colloquia. Similarly, CA brings expertise on research, policy and advocacy related to Afghan refugees in multiple contexts including women’s experience of displacement, refugee-hood and insecurity and its centrality in Islamabad ensures that member’s voices are heard at different fora in the capital. 
@@ -61,7 +61,7 @@ const About = () => {
             />
           </Col>
           <Col md={6} className="px-4">
-            <p className="text-white text-justify paragraph">
+            <p className="text-white text-justify card-text">
               {isSmallScreen && !showFullTextMRC
                 ? `${mrcText.substring(0, 150)}...`
                 : mrcText}
@@ -89,7 +89,7 @@ const About = () => {
             />
           </Col>
           <Col md={6} className="px-4">
-            <p className="text-white text-justify paragraph">
+            <p className="text-white text-justify card-text ">
               {isSmallScreen && !showFullTextCA
                 ? `${caText.substring(0, 150)}...`
                 : caText}

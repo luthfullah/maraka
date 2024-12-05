@@ -19,7 +19,7 @@ const MNavbar = () => {
           <div className="logo-container">
             <div className="logo-holder logo-4">
               <div href="">
-                <h3 className=" text-white">MARAKA </h3>
+                <p className="text-white fs-5">MARAKA </p>
                 <p className="text-white fs-5"> Humanitarian Observatory</p>
               </div>
             </div>
@@ -80,7 +80,7 @@ const MNavbar = () => {
             <Nav.Link
               className="text-white nav-item"
               onClick={() => navigate("/resourcesPDF")}
-              href="#about"
+              // href="#about"
             >
               Digital Archive
             </Nav.Link>

@@ -131,7 +131,7 @@ const Events = () => {
         />
         <div className="card-body d-flex flex-column flex-grow-1">
           <h5 className="sec-color card-title fw-bold title-height">{event.eventName}</h5>
-          <p className="card-text text-justify paragraph description-height flex-grow-1">
+          <p className="card-text text-justify description-height ">
             {expandedCardId === event.id
               ? event.description
               : `${event.description.substring(0, 100)}...`}

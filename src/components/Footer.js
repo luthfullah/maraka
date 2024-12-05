@@ -28,7 +28,7 @@ function Footer() {
               <FaPhoneSquareAlt color="#ffffff" className="me-2" size={20} />
               <span className="text-white">
                 {/* {adminAgencyData?.mobile_no} */}
-                03119111979
+                +92 91 9216751
 
               </span>
             </div>
@@ -37,7 +37,7 @@ function Footer() {
               <MdLocationOn color="#ffffff" className="me-2" size={22} />
               <span className="text-white">
                 {/* {adminAgencyData?.address?.replace(/]/g, ", ").toUpperCase()} */}
-                UOP,Peshawar,Pakistan.
+                Department of Political Science, University of Peshawar
               </span>
             </div>
           </div>
