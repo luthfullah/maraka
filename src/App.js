@@ -17,9 +17,11 @@ import ResourcesPdf from "./components/ResourcesPdf";
 import VideosAdmin from "./components/VideosAdmin";
 import RegisteredUsers from "./components/RegisteredUsers";
 import Partnership from "./components/Partnership";
+import PdfDownloadList from "./components/pdfDownloadList";
+import BlogsFileUpload from "./components/BlogsFileUpload";
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken') || null);
-
+console.log("token",token)
   const handleLogin = (authToken) => {
     setToken(authToken);
     localStorage.setItem('authToken', authToken);
@@ -46,6 +48,7 @@ function App() {
           <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
           <Route path='/contact' element={<AdminContact/>} />
           <Route path='/resourcesPDF' element={<ResourcesPdf/>} />
+          <Route path='/blogs' element={<PdfDownloadList/>} />
           <Route path='/partnership' element={<Partnership/>} />
 
           {/* <Route path='/eventsImages' element={<EventsAdmin/>} />
@@ -58,6 +61,7 @@ function App() {
           <Route path="/images" element={<ProtectedRoute token={token} element={<ImagesDelete />} />} />
           <Route path="/eventsDelete" element={<ProtectedRoute token={token} element={<DeleteEvents />} />} />
           <Route path="/pdf" element={<ProtectedRoute token={token} element={<PdfUpload />} />} />
+          <Route path="/blog" element={<ProtectedRoute token={token} element={<BlogsFileUpload />} />} />
           <Route path="/video" element={<ProtectedRoute token={token} element={<VideosAdmin />} />} />
           <Route path="/reg-eve" element={<ProtectedRoute token={token} element={<RegisteredUsers />} />} />
        

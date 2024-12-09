@@ -68,7 +68,10 @@
 }
 
 span {
-  margin-left: 16px;
+  margin-left: 14px;
+}
+.nav-item {
+  font-size: 14px; /* Default font size */
 }
 
 /* Apply gray background to navbar items only on small screens when the navbar is collapsed */
@@ -76,10 +79,12 @@ span {
   .collapsed-nav-links .nav-item {
     background-color: #463640;
     padding: 10px;
+    font-size: 10px;
   }
 
   .collapsed-nav-links .nav-item:hover {
-    background-color: #25151f; /* Optional: darker color on hover */
+    background-color: #25151f; 
+    font-size: 10px;
   }
 }
 

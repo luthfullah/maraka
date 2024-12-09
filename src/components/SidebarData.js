@@ -42,6 +42,12 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Blogs Upload',
+    path: '/blog',
+    icon: <FaCloudUploadAlt />,
+    cName: 'nav-text'
+  },
+  {
     title: 'Video Upload',
     path: '/video',
     icon: <FaCloudUploadAlt />,

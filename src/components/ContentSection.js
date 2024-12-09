@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ContentSection = () => {
   return (
-    <div className="d-flex justify-content-center my-5">
+    <div className="d-flex justify-content-center " style={{marginTop:"90px",marginBottom:"10px"}}>
       <div
         className="p-5 rounded shadow-lg bg-white"
         style={{

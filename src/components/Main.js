@@ -16,7 +16,7 @@ function Main() {
       <main>
       <Navbar />
         {/* <Header /> */}
-        <ContentSection/>
+        <ContentSection />
         <Events />
 
         <VideoPlayer />

@@ -11,7 +11,7 @@ const MNavbar = () => {
   const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleToggle = () => setIsCollapsed(!isCollapsed);
-  console.log("isCollapsed", isCollapsed);
+  
   return (
     <Navbar className="bg_color" expand="lg" onToggle={handleToggle}>
       <Container>
@@ -83,6 +83,13 @@ const MNavbar = () => {
               // href="#about"
             >
               Digital Archive
+            </Nav.Link>
+            <Nav.Link
+              className="text-white nav-item"
+              onClick={() => navigate("/blogs")}
+              // href="#about"
+            >
+              Blogs
             </Nav.Link>
             <Nav.Link className="text-white nav-item" href="#gallery">
               Gallery

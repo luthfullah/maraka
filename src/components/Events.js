@@ -112,11 +112,11 @@ const Events = () => {
 
   const renderEventCard = (event, isUpcoming) => (
     <div
-      className="col-lg-1 col-md-4 col-sm-12 row mb-4"
+      className="row col-lg-1 col-md-4 col-sm-12 mb-4 "
       key={event.id}
     >
       <div
-        className={`card shadow-sm h-60 d-flex flex-column ${
+        className={`card  shadow-sm${
           isUpcoming ? "border-primary" : "border-secondary"
         }`}
       >
@@ -201,7 +201,7 @@ const Events = () => {
 
       <div className="row justify-content-center">
         <div className="col-12">
-          <h3 className="text-primary mb-3 fs-2 text-white">Upcoming Events</h3>
+          <h3 className="mb-3 fs-2 text-white">Upcoming Events</h3>
           <div className="row justify-content-center">
             {upcomingEvents.length > 0 ? (
               upcomingEvents.map((event) => renderEventCard(event, true))
@@ -216,8 +216,8 @@ const Events = () => {
 
       <div className="row justify-content-center">
         <div className="col-12">
-          <h3 className="text-secondary mb-3 text-white fs-2">Past Events</h3>
-          <div className="row justify-content-center">
+          <h3 className=" text-secondary mb-3 text-white fs-2 ">Past Events</h3>
+          <div className="row justify-content-center ">
             {pastEvents.length > 0 ? (
               pastEvents.map((event) => renderEventCard(event, false))
             ) : (

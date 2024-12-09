@@ -22,8 +22,8 @@ const About = () => {
   const caText = "Crossroads Advisory (CA) is a private limited company, incorporated under Section 16 of the Companies Act, 2017 (XIX of 2017) by the Securities and Exchange Commission of Pakistan. It was founded and is headed by Saba Gul Khattak, a well-known independent researcher who has worked in senior positions in both government and non-government sectors. CA’s mandate is to work in institutional development, project planning, strategic development, capacity building, and ancillary activities and services. CA has a Board of Advisors consisting of eminent Pakistani professionals: Dr. Farzana Bari, Dr. Afiya S. Zia, Mr. Owais Tohid, Mr. Rajib ul Akhter, and Dr. Amena Mohsin. Currently, CA has received seed funding from the Women’s Research Network for establishing the Maraka Humanitarian Observatory (MHO) to monitor humanitarian governance trends.";
 
   return (
-    <div id='about' className="bg_color" style={{ minHeight: '100vh' }}>
-      <Container className="my-5">
+    <div id='about' className="bg_color" style={{ minHeight: '100vh',marginBottom:"10px" }}>
+      <Container className="my-5"  style={{paddingBottom:"10px" }}>
         <h1 className="text-center mb-5 display-4 tex_color">ABOUT</h1>
 
         
@@ -78,17 +78,18 @@ const About = () => {
         </Row>
 
         {/* Crossroads Advisory */}
-        <Row className="">
+        <Row  
+             >
           <Col md={6} className="text-center">
             <Image 
               src="/Picture3.png" 
               alt="Crossroads Advisory" 
               fluid 
               rounded 
-              className="shadow-lg" 
+              className="shadow-lg"
             />
           </Col>
-          <Col md={6} className="px-4">
+          <Col md={6} className="px-4 " >
             <p className="text-white text-justify card-text ">
               {isSmallScreen && !showFullTextCA
                 ? `${caText.substring(0, 150)}...`
