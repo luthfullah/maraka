@@ -29,7 +29,7 @@ const VideoPlayer = ({ videoId }) => {
       {error && <p className="text-danger">{error}</p>}
       {videoUrl ? (
         <div className="text-center  ">
-          <h3 className="py-4 tex-color">VIDEO RESOURCES</h3>
+          <h3 className="py-4 tex-color  fs-1 fw-bolder">VIDEO RESOURCES</h3>
           <video
             className=" p-5 rounded shadow-lg  border  w-70 "
             controls

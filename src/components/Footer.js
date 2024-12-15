@@ -13,20 +13,20 @@ function Footer() {
         <div className="col-md-4 d-flex justify-content-center">
           {" "}
           {/* Adjust col-md-6 to your desired width */}
-          <div id="contact-us" className="d-flex flex-column">
+          <div id="contact-us" className="d-flex flex-column bg-primary  align-items-md-start">
             <div className="text-white h1 mb-4">Contact Info</div>
 
-            <div className="my-2 d-flex align-items-center">
-              <IoMdMail color="#ffffff" className="me-2" size={20} />
-              <span className="text-white">
+            <div className="my-2 d-flex  align-items-center">
+              <IoMdMail color="#ffffff" className=""  />
+              <span className="text-white fs-6 fs-md-3">
                 {/* {adminAgencyData?.email} */}
                 mho@marakahumanitarianobservatory.com
                 </span>
             </div>
 
             <div className="my-2 d-flex align-items-center">
-              <FaPhoneSquareAlt color="#ffffff" className="me-2" size={20} />
-              <span className="text-white">
+              <FaPhoneSquareAlt color="#ffffff" className=""  />
+              <span className="text-white fs-6 fs-md-3 ">
                 {/* {adminAgencyData?.mobile_no} */}
                 +92 91 9216751
 
@@ -34,8 +34,8 @@ function Footer() {
             </div>
 
             <div className="my-2 d-flex align-items-center">
-              <MdLocationOn color="#ffffff" className="me-2" size={22} />
-              <span className="text-white">
+              <MdLocationOn color="#ffffff" className=""  />
+              <span className="text-white fs-6 fs-md-3">
                 {/* {adminAgencyData?.address?.replace(/]/g, ", ").toUpperCase()} */}
                 Department of Political Science, University of Peshawar
               </span>

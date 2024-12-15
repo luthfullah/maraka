@@ -24,7 +24,7 @@ const About = () => {
   return (
     <div id='about' className="bg_color" style={{ minHeight: '100vh',marginBottom:"10px" }}>
       <Container className="my-5"  style={{paddingBottom:"10px" }}>
-        <h1 className="text-center mb-5 display-4 tex_color">ABOUT</h1>
+        <h1 className="text-center mb-5 display-4 tex_color  fs-1 fw-bolder pt-2">ABOUT</h1>
 
         
 
@@ -45,7 +45,7 @@ const About = () => {
         {/* Organizations Heading */}
         <Row className="text-center mb-4">
           <Col>
-            <h2 className="display-5 text-white">Organizations</h2>
+            <h2 className="display-5 text-white  fs-1">Organizations</h2>
           </Col>
         </Row>
 

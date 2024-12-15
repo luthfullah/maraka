@@ -22,7 +22,7 @@ import BlogsFileUpload from "./components/BlogsFileUpload";
 import BlogsDelete from "./components/BlogsDelete";
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken') || null);
-console.log("token",token)
+
   const handleLogin = (authToken) => {
     setToken(authToken);
     localStorage.setItem('authToken', authToken);

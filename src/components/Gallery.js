@@ -225,7 +225,7 @@ export const Gallery = () => {
   return (
     <div id="gallery" className="gallerycenter">
       <div className="gallery-container">
-        <h2 className="gallery-heading">Gallery</h2>
+        <h2 className=" text-center justify-content-center mb-4 py-3  fs-1 fw-bolder">Gallery</h2>
         <div className="gallery-grid">
           {images.map((image, index) => (
             <div

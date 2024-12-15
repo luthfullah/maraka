@@ -20,7 +20,18 @@ const PdfDownloadList = () => {
     };
 
     fetchPDFs();
-  }, []);
+
+    // Navigate to home page if there's a reload
+    const handlePageReload = () => {
+      navigate("/blogs");
+    };
+
+    window.addEventListener("beforeunload", handlePageReload);
+    return () => {
+      window.removeEventListener("beforeunload", handlePageReload);
+    };
+
+  }, [navigate]);
 
   return (
   

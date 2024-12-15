@@ -46,7 +46,7 @@ const Events = () => {
   const pastEvents = Array.isArray(eventss)
   ? eventss.filter((even) => even.date && moment(even.date).isBefore(today))
   : [];
-  console.log("pastEvents",pastEvents)
+ 
 
   const [expandedCardId, setExpandedCardId] = useState(null);
 

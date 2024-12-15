@@ -106,10 +106,14 @@ padding-bottom: 10px;
 }
 .tex-color{
   color: #463640;
-  font-size: 60px;
+  font-size: 30px;
 }
 .sec-color{
   color: #463640;
+  
+}
+.sec-colo{
+  background-color: #463640;
   
 }
 .tex_color{

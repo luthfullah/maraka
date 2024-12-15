@@ -34,7 +34,7 @@ function Contact() {
   return (
     <div id="contact" className='d-flex justify-content-center align-items-center' style={{minHeight: '100vh'}} >
     <div  className="container" >
-      <h2 className=" text-center mb-4 tex-color ">Get In Touch</h2>
+      <h2 className="text-center justify-content-center mb-4 py-3  fs-1 fw-bolder mt-4">Get In Touch</h2>
       
       {/* Display status message */}
       {status && (
