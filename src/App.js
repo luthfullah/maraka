@@ -19,6 +19,7 @@ import RegisteredUsers from "./components/RegisteredUsers";
 import Partnership from "./components/Partnership";
 import PdfDownloadList from "./components/pdfDownloadList";
 import BlogsFileUpload from "./components/BlogsFileUpload";
+import BlogsDelete from "./components/BlogsDelete";
 function App() {
   const [token, setToken] = useState(localStorage.getItem('authToken') || null);
 console.log("token",token)
@@ -57,6 +58,7 @@ console.log("token",token)
           <Route path='/eventsDelete' element={<DeleteEvents/>} />
           <Route path='/pdf' element={<PdfUpload/>} /> */}
           <Route path="/eventsImages" element={<ProtectedRoute token={token} element={<EventsAdmin />} />} />
+          <Route path="/blogsDelete" element={<ProtectedRoute token={token} element={<BlogsDelete />} />} />
           <Route path="/products" element={<ProtectedRoute token={token} element={<ProductsAdmin />} />} />
           <Route path="/images" element={<ProtectedRoute token={token} element={<ImagesDelete />} />} />
           <Route path="/eventsDelete" element={<ProtectedRoute token={token} element={<DeleteEvents />} />} />

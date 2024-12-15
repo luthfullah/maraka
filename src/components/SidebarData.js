@@ -48,6 +48,12 @@ export const SidebarData = [
     cName: 'nav-text'
   },
   {
+    title: 'Delete Blogs',
+    path: '/blogsDelete',
+    icon: <MdOutlineDeleteForever  />,
+    cName: 'nav-text'
+  },
+  {
     title: 'Video Upload',
     path: '/video',
     icon: <FaCloudUploadAlt />,
