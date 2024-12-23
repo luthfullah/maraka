@@ -34,8 +34,7 @@ function App() {
   };
   return (
     <>
-     <Router>
-      <>
+
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/admin" element={
@@ -51,6 +50,7 @@ function App() {
           <Route path='/resourcesPDF' element={<ResourcesPdf/>} />
           <Route path='/blogs' element={<PdfDownloadList/>} />
           <Route path='/partnership' element={<Partnership/>} />
+          <Route path='/admin/secret/121' element={<AdminPage  />} />
 
           {/* <Route path='/eventsImages' element={<EventsAdmin/>} />
           <Route path='/products' element={<ProductsAdmin/>} />
@@ -69,9 +69,7 @@ function App() {
        
 
         </Routes>
-        
-      </>
-    </Router>
+   
     
     
       {/* <Navbar />

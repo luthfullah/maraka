@@ -13,7 +13,7 @@ function Footer() {
         <div className="col-md-4 d-flex justify-content-center">
           {" "}
           {/* Adjust col-md-6 to your desired width */}
-          <div id="contact-us" className="d-flex flex-column bg-primary  align-items-md-start">
+          <div id="contact-us" className="d-flex flex-column   align-items-md-start">
             <div className="text-white h1 mb-4">Contact Info</div>
 
             <div className="my-2 d-flex  align-items-center">
